@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee_view_section_common_details_item_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@id/barrier_section_common_details_item_bottom_border"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/ic_profile"
+        app:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/text_view_section_common_details_item_user_logins"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/drawee_view_section_common_details_item_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/drawee_view_section_common_details_item_avatar"
+        app:layout_constraintTop_toTopOf="@+id/drawee_view_section_common_details_item_avatar"
+        tools:text="display_login (login)" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_section_common_details_item_bottom_border"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="drawee_view_section_common_details_item_avatar, text_view_section_common_details_item_user_logins" />
+
+    <TextView
+        android:id="@+id/text_view_section_common_details_item_repository_description"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="10dp"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_repository"
+        app:layout_constraintBottom_toTopOf="@id/text_view_section_common_details_item_created_at"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_section_common_details_item_bottom_border"
+        tools:text="For repository_name repository" />
+
+    <TextView
+        android:id="@+id/text_view_section_common_details_item_created_at"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_section_common_details_item_repository_description"
+        tools:text="Creation date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

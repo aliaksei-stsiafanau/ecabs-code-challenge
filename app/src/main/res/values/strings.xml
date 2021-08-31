@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EcabsCodeChallenge</string>
+    <string name="create_event_label">Create Event</string>
+    <string name="delete_event_label">Delete Event</string>
+    <string name="push_event_label">Push Event</string>
+    <string name="issues_event_label">Issues Event</string>
+    <string name="watch_event_label">Watch Event</string>
+    <string name="create_event_description">Created %1$s %2$s</string>
+    <string name="delete_event_description">Deleted %1$s %2$s</string>
+    <string name="push_event_description">Pushed into %1$s</string>
+    <string name="watch_event_description">Starred %1$s</string>
+    <string name="common_section_logins">%1$s (%2$s)</string>
+    <string name="repository_label">For %1$s repository</string>
+    <string name="unknown_field_value">unknown</string>
+    <string name="error_description">Oops, something went wrong. Please check your internet connection or try again later.</string>
+    <string name="error_retry_label">Retry</string>
+</resources>

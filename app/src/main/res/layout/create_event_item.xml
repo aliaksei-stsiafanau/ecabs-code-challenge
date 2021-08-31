@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drawee_view_create_event_item_user_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:placeholderImage="@drawable/ic_profile"
+            app:placeholderImageScaleType="centerCrop"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@id/barrier_create_event_item_bottom_border"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_create_event_item_display_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_create_event_item_display_name"
+            style="@style/DisplayNameTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toTopOf="@id/barrier_create_event_item_bottom_border"
+            app:layout_constraintEnd_toStartOf="@+id/chip_create_event_item_identifier"
+            app:layout_constraintStart_toEndOf="@id/drawee_view_create_event_item_user_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Display name" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_create_event_item_identifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/create_event_label"
+            app:chipBackgroundColor="@color/green_200"
+            app:layout_constraintBottom_toTopOf="@id/barrier_create_event_item_bottom_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_create_event_item_bottom_border"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="text_view_create_event_item_display_name, chip_create_event_item_identifier" />
+
+        <TextView
+            android:id="@+id/text_view_create_event_item_description"
+            style="@style/DescriptionTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_create_event_item_bottom_border"
+            tools:text="Create event description" />
+
+        <TextView
+            android:id="@+id/text_view_create_event_item_creation_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_create_event_item_description"
+            tools:text="23.05.2021" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
